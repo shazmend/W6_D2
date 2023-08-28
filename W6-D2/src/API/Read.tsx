@@ -7,7 +7,7 @@ type Iname = {
 
 function Read() {
   const [name, setName]=React.useState<Iname>({
-    name: ""  
+    name: "",  
   });
   const [names, setNames]=React.useState<Iname[]>([])
 
@@ -48,15 +48,13 @@ function Read() {
       <br />
       <button onClick={SendName}>Send</button>
 
-      {
-      names.map((item)=>{
-        return <>
-        <h4>
-        {item.name}
-        </h4>
-        </>;
-      })
-      }
+      {names.map((item)=>{
+        return(
+        <>
+        <h4>{item.name}</h4>
+        </>
+        ) 
+      })}
     </div>
   );
 }
